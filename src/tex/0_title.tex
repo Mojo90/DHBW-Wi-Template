@@ -1,0 +1,37 @@
+\documentclass[../Document.tex]{subfiles} 
+\begin{document}
+\makeatletter
+\begin{titlepage}
+\begin{center}
+\LARGE
+\textbf{\@title}
+\Large \\[2.5cm]
+\papertype \\[1.5cm]
+Vorgelegt am \@date \\[1.5cm]
+Fakultät \faculty \\
+Studiengang \studyfield \\
+Kurs \studycourse \\[1.5cm]
+von \\
+\@author \\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+Ausbildungsstätte:\\
+\betreuer
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+DHBW Stuttgart: \\
+\pruefer
+\end{flushright}
+\end{minipage}
+\\[3.5cm]
+\ifconfidential
+\large Der Inhalt der Arbeit darf Dritten ohne Genehmigung der Ausbildungsstätte
+nicht zugänglich gemacht werden.
+\fi
+\end{center}
+\end{titlepage}
+\makeatother
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[11pt, a4paper, titlepage]{article}
+\usepackage{config/dhbw_ba_de}
+
+%% -------------------------- Konfiguration der Titelseite
+\title{Lorem Ipsum...}
+\author{Timo Puschkasch}
+\date{6. Mai 2013}
+
+\def\betreuer{
+IBM Deutschland EAS GmbH\\
+...
+}
+
+\def\pruefer{
+Dr. Muster Tester \\
+...
+}
+
+\def\papertype{Bachelorarbeit}
+\def\faculty{Wirtschaft}
+\def\studyfield{Wirtschaftsinformatik}
+\def\studycourse{WWI2010D}
+
+\setboolean{confidential}{false}
+%% -------------------------- Ende Konfiguration de^r Titelseite
+
+\begin{document}
+\subfile{tex/0_title} % Titel-Seite einfügen
+
+% Verzeichnisse
+\pagenumbering{Roman}
+\setcounter{page}{2}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\listoftodos
+\newpage
+
+%% Vorbereitung auf normalen Text ab hier
+\normalsize
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%% -------------------------- Ab hier Kapitel einbinden
+\subfile{tex/1_Einfuehrung}
+%% --------------------------
+
+% Abschluss
+\subfile{tex/99_Literatur}
+\subfile{tex/97_Erklaerung}
+\end{document}

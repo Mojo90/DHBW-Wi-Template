@@ -1,0 +1,46 @@
+\ProvidesPackage{config/dhbw_ba_de}
+
+% Grundeinstellungen für des Seiten-Layout
+\usepackage[a4paper, left=3.5 cm, right=1.5 cm, top=2.5 cm, bottom=2 cm]{geometry}
+
+% Sprache und Format festlegen
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[babel,german=guillemets]{csquotes}
+
+% Literatur-Verzeichnis einbinden
+\usepackage[bibencoding=utf8, backend=bibtex, citestyle=dhbw_ibim, bibstyle=dhbw_ibim, sorting=nty, block=space, firstinits=true]{biblatex}
+
+% Diese Dinge machen das Leben leichter
+\usepackage{fancyhdr, uarial, subfiles, tocbibind, tocloft, setspace, graphicx, todonotes, nomencl}
+
+\onehalfspacing                           % 1.5-fachen Zeilenabstand einstellen
+\renewcommand{\familydefault}{\sfdefault} % Arial nutzen
+\fancyhf{}                                % Header und Footer "bereinigen"
+\fancyhead[C]{\thepage}                   % Seitennummer oben zentriert zeigen
+\fancypagestyle{plain}{					  % Auch bei Special Seiten, z.B. Inhaltsverzeichnis
+	\fancyhf{}
+	\fancyhead[C]{\thepage}
+}
+\renewcommand{\headrulewidth}{0pt}        % Linie oben entfernen
+\pagestyle{fancy}                         % Auf den eingestellten Page Style setzen
+\setlength{\headheight}{15pt}             % Header-Größe festlegen
+\setlength{\parskip}{10pt plus 1pt}       % Abstand zwischen Absätzen
+\bibliography{references/Literatur.bib}   % Literatur-Verzeichnis festlegen
+\setlength{\parindent}{0in}               % Absätze nicht einrücken
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Inhaltsverzeichnis mit Punkten als Füller konfigurieren
+
+% Images
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% Nutzung: \abbildung{Dateiname}{Beschreibung}{Breite in Faktor der Seitenbreite}
+\newcommand{\abbildung}[3]{
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=#3\textwidth]{#1} 
+	\caption{#2}
+\end{figure}}
+
+% Variablen vorbereiten
+\newboolean{confidential}

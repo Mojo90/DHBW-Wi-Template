@@ -1,0 +1,13 @@
+\documentclass[../Document.tex]{subfiles} 
+\begin{document}
+\defbibheading{literatur}{\subsection*{Literaturverzeichnis}}
+\defbibheading{www}{\subsection*{Internetquellen}}
+\defbibheading{conversation}{\subsection*{Interview-Verzeichnis}}
+
+\newpage
+\printbibliography[nottype=online,nottype=misc,heading=literatur]
+\newpage
+\printbibliography[type=online,heading=www]
+\newpage
+\printbibliography[type=misc,heading=conversation]
+\end{document}
