@@ -10,4 +10,5 @@ h2. Benutzung
 
 Das Hauptdokument ist die Datei _Document.tex_. Diese sollte als Basis beim kompilieren genutzt werden. In manchen Tools (z.B. TexMaker) lässt sich das Root-Dokument auch über das Menü einstellen, damit die Quick Build Funktion problemlos funktioniert, unabhängig von der geöffneten Datei.
 
-Beim Ausführen ist es auch wichtig, BibTex mit einzuschließen. Die vorgeschlagene Reihenfolge beim Ausführen ist daher PdfTex -> BibTex -> PdfTex. In TexMaker lässt sich dies in den Einstellungen unter Quick Build Settings festlegen.
+Beim Ausführen ist es auch wichtig, BibTex mit einzuschließen. Die vorgeschlagene Reihenfolge beim Ausführen ist daher PdfTex -> BibTex -> makeindex -> PdfTex. In TexMaker lässt sich dies in den Einstellungen unter Quick Build Settings festlegen.
+Zum Beispiel: @pdflatex Document.tex|bibtex Document|makeindex Document.nlo -s nomencl.ist -o Document.nls|pdflatex Document.tex@
