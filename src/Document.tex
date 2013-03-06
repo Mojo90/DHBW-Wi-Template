@@ -32,7 +32,12 @@ Dr. Muster Tester \\
 \setcounter{page}{2}
 \tableofcontents
 \newpage
-\printnomenclature
+\newpage
+\section*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\subfile{tex/98_Abkuerzungen}
+\glsaddall
+\printglossary[type=\acronymtype]
 \newpage
 \listoffigures
 \newpage
