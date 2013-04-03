@@ -9,4 +9,16 @@ Abkürzung 1.:
 
 Abkürzung 2.:
 \ac{FPS}
+
+Beispiel Fußnote an Tabelle/Bild:
+
+\begin{table}[!htb]
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}  \hline\hline
+   \textbf{Lorem} & \textbf{Ipsum} & \textbf{1} & \textbf{2} \\ \hline
+    Dies & ist & ein & Beispiel \\                                            \hline
+\end{tabular}
+\caption[Beispieltabelle]{Beispieltabelle\protect\footnotemark}
+\end{table}
+\footnotetext{\cite[Vgl.][S. 50]{market_analysis_2010}}
+
 \end{document}
